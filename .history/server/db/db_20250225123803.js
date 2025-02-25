@@ -1,10 +1,7 @@
 const mongoose = require("mongoose");
-const dotenv = require("dotenv")
-dotenv.config()
-console.log(process.env.MONOGODB_URL)
  const connectTODatabase = async ()=>{
     try {
-        await mongoose.connect(process.env.MONOGODB_URL,{
+        await mongoose.connect("mongodb+srv://mohanmaniam934:Ls24FSX9Ewj11VVA@ems.pqcci.mongodb.net/?retryWrites=true&w=majority&appName=EMS",{
             serverSelectionTimeoutMS: 20000,
             
         }

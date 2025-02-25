@@ -1,12 +1,9 @@
 const mongoose = require("mongoose");
-const dotenv = require("dotenv")
-dotenv.config()
-console.log(process.env.MONOGODB_URL)
  const connectTODatabase = async ()=>{
     try {
-        await mongoose.connect(process.env.MONOGODB_URL,{
+        await mongoose.connect("mongodb://localhost:27017/ems",{
             serverSelectionTimeoutMS: 20000,
-            
+            family
         }
         ).then(()=>console.log("db connected"))
     } catch (error) {
