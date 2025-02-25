@@ -1,7 +1,7 @@
 const path = require("path");
 const Employee = require("../models/employee");
 const User = require("../models/User");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const multer = require("multer");
 const Department = require("../models/Department");
 
